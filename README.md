@@ -9,6 +9,8 @@ This is a Vite app containing:
 
 ### Installation
 
+npm install
+
 #### Download the template
 
 ```shell
