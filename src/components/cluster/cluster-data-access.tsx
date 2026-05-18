@@ -22,6 +22,11 @@ export enum ClusterNetwork {
 // To use the mainnet-beta cluster, provide a custom endpoint
 export const defaultClusters: SolanaCluster[] = [
   {
+    name: 'mainnet-beta',
+    endpoint: 'https://mainnet.helius-rpc.com/?api-key=ab85d366-df84-4451-93c8-9b9e81e8dc70', // ⚠️ use real RPC
+    network: ClusterNetwork.Mainnet,
+  },
+  {
     name: 'devnet',
     endpoint: clusterApiUrl('devnet'),
     network: ClusterNetwork.Devnet,
@@ -34,7 +39,11 @@ export const defaultClusters: SolanaCluster[] = [
   },
 ]
 
-const clusterAtom = atomWithStorage<SolanaCluster>('solana-cluster', defaultClusters[0])
+const MAINNET_CLUSTER = defaultClusters.find((c) => c.network === ClusterNetwork.Mainnet)!
+
+const clusterAtom = atomWithStorage<SolanaCluster>('solana-cluster', MAINNET_CLUSTER)
+
+// const clusterAtom = atomWithStorage<SolanaCluster>('solana-cluster', defaultClusters[0])
 const clustersAtom = atomWithStorage<SolanaCluster[]>('solana-clusters', defaultClusters)
 
 const activeClustersAtom = atom<SolanaCluster[]>((get) => {

@@ -3,31 +3,33 @@ import { AppLayout } from '@/components/app-layout.tsx'
 import { RouteObject, useRoutes } from 'react-router'
 import { lazy } from 'react'
 
-const links = [
-  //
-  { label: 'Home', path: '/' },
-  { label: 'Account', path: '/account' },
-]
-const LazyDashboard = lazy(() => import('@/components/dashboard/dashboard-feature'))
-const LazyAccountIndex = lazy(() => import('@/components/account/account-index-feature'))
-const LazyAccountDetail = lazy(() => import('@/components/account/account-detail-feature'))
+// const links = [
+  
+//   { label: 'Home', path: '/' },
+//   { label: 'Account', path: '/account' },
+//   { label: 'Counter Program', path: '/counter' },
+// ]
+
+const LazyCounter = lazy(() => import('@/components/swap/swap-ui'))
+const LazyAdmin = lazy(() => import('@/components/admin/admin-ui'))
 
 const routes: RouteObject[] = [
-  { index: true, element: <LazyDashboard /> },
-  {
-    path: 'account',
-    children: [
-      { index: true, element: <LazyAccountIndex /> },
-      { path: ':address', element: <LazyAccountDetail /> },
-    ],
-  },
+  { index: true, element: <LazyCounter /> },
+  // {
+  //   path: 'account',
+  //   children: [
+  //     { index: true, element: <LazyAccountIndex /> },
+  //     { path: ':address', element: <LazyAccountDetail /> },
+  //   ],
+  // },
+  { path: 'admin', element: <LazyAdmin /> },
 ]
 
 export function App() {
   const router = useRoutes(routes)
   return (
     <AppProviders>
-      <AppLayout links={links}>{router}</AppLayout>
+      <AppLayout>{router}</AppLayout>
     </AppProviders>
   )
 }
