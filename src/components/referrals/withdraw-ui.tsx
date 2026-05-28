@@ -810,7 +810,7 @@ export default function WithdrawUi() {
   // ── Not connected ─────────────────────────────────────────────────────────────
   if (!connected || !publicKey) {
     return (
-      <div className="min-h-screen bg-neutral-50 dark:bg-neutral-950 flex items-center justify-center p-6">
+      <div className="min-h-screen bg-neutral-50 dark:bg-neutral-900 flex items-center justify-center p-6">
         <div className="text-center max-w-sm space-y-6">
           <div className="w-20 h-20 rounded-3xl bg-[#890AD7]/10 border border-[#890AD7]/20 flex items-center justify-center mx-auto">
             <Wallet size={36} className="text-[#890AD7]" />
@@ -834,7 +834,7 @@ export default function WithdrawUi() {
 
   if (authLoading) {
     return (
-      <div className="min-h-screen bg-neutral-50 dark:bg-neutral-950 flex items-center justify-center p-6">
+      <div className="min-h-screen bg-neutral-50 dark:bg-neutral-900 flex items-center justify-center p-6">
         <div className="text-center space-y-4">
           <div className="w-16 h-16 rounded-full bg-[#890AD7]/10 border-2 border-[#890AD7]/25 flex items-center justify-center mx-auto">
             <Loader2 size={28} className="text-[#890AD7] animate-spin" />
@@ -850,7 +850,7 @@ export default function WithdrawUi() {
 
   if (authError) {
     return (
-      <div className="min-h-screen bg-neutral-50 dark:bg-neutral-950 flex items-center justify-center p-6">
+      <div className="min-h-screen bg-neutral-50 dark:bg-neutral-900 flex items-center justify-center p-6">
         <div className="text-center max-w-sm space-y-5">
           <div className="w-16 h-16 rounded-full bg-red-50 dark:bg-red-500/10 border-2 border-red-200 dark:border-red-500/20 flex items-center justify-center mx-auto">
             <AlertCircle size={28} className="text-red-500" />
@@ -875,7 +875,7 @@ export default function WithdrawUi() {
   const isBalanceLoading = dataLoading && availableUSDT === 0 && availableMEA === 0
 
   return (
-    <div className="min-h-screen bg-neutral-50 dark:bg-neutral-950 transition-colors">
+    <div className="min-h-screen bg-neutral-50 dark:bg-neutral-900 transition-colors">
       <main className="max-w-2xl mx-auto px-4 sm:px-6 py-6 sm:py-10 space-y-6 sm:space-y-8">
         {/* Address + refresh */}
         <div className="flex items-center justify-between">
