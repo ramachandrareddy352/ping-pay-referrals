@@ -4,6 +4,7 @@ import { ClusterProvider } from '@/components/cluster/cluster-data-access'
 import { SolanaProvider } from '@/components/solana/solana-provider'
 import { LangProvider } from './lang-provider'
 import React from 'react'
+import { AuthProvider } from './AuthContext'
 
 export function AppProviders({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
@@ -11,7 +12,9 @@ export function AppProviders({ children }: Readonly<{ children: React.ReactNode 
       <LangProvider>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <ClusterProvider>
-            <SolanaProvider>{children}</SolanaProvider>
+            <SolanaProvider>
+              <AuthProvider> {children}</AuthProvider>
+            </SolanaProvider>
           </ClusterProvider>
         </ThemeProvider>
       </LangProvider>
