@@ -24,9 +24,7 @@ export enum ClusterNetwork {
 export const defaultClusters: SolanaCluster[] = [
   {
     name: 'mainnet-beta',
-    endpoint:
-      import.meta.env.VITE_MAINNET_RPC_URL ??
-      'https://mainnet.helius-rpc.com/?api-key=ab85d366-df84-4451-93c8-9b9e81e8dc70',
+    endpoint: 'https://mainnet.helius-rpc.com/?api-key=ab85d366-df84-4451-93c8-9b9e81e8dc70',
     network: ClusterNetwork.Mainnet,
   },
   {
