@@ -651,7 +651,7 @@ function WithdrawalItem({ item, t }: { item: WithdrawalTx; t: (typeof translatio
             </div>
           </div>
           <div
-            className={`flex items-center gap-1.5 px-2.5 py-1 rounded-full border text-xs sm:text-sm font-bold flex-shrink-0 ${sc.text} ${sc.bg} ${sc.border}`}
+            className={`flex items-center gap-1.5 px-2.5 py-1 rounded-full border text-xs sm:text-sm font-bold shrink-0 ${sc.text} ${sc.bg} ${sc.border}`}
           >
             <StatusIcon size={12} />
             {item.status.charAt(0).toUpperCase() + item.status.slice(1)}

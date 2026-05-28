@@ -1,6 +1,8 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable react-refresh/only-export-components */
 /* eslint-disable no-empty */
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import React, { createContext, useContext, useState, useCallback, useRef, useEffect, type ReactNode } from 'react'
+import { createContext, useContext, useState, useCallback, useRef, useEffect, type ReactNode } from 'react'
 import { useWallet } from '@solana/wallet-adapter-react'
 import bs58 from 'bs58'
 
