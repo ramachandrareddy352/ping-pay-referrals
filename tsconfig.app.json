@@ -19,9 +19,7 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true,
-    "baseUrl": ".",
     "paths": {
-      "@project/anchor": ["anchor/src"],
       "@/*": ["./src/*"]
     }
   },

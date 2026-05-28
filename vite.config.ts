@@ -16,4 +16,7 @@ export default defineConfig({
       root: resolve(__dirname),
     }),
   ],
+  define: {
+    'process.env.MAINNET_RPC_URL': JSON.stringify(process.env.VITE_MAINNET_RPC_URL),
+  },
 })

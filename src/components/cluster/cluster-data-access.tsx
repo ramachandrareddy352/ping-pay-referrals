@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 import { clusterApiUrl, Connection } from '@solana/web3.js'
 import { atom, useAtomValue, useSetAtom } from 'jotai'
 import { atomWithStorage } from 'jotai/utils'
@@ -23,7 +24,7 @@ export enum ClusterNetwork {
 export const defaultClusters: SolanaCluster[] = [
   {
     name: 'mainnet-beta',
-    endpoint: 'https://mainnet.helius-rpc.com/?api-key=ab85d366-df84-4451-93c8-9b9e81e8dc70', // ⚠️ use real RPC
+    endpoint: import.meta.env.VITE_MAINNET_RPC_URL!,
     network: ClusterNetwork.Mainnet,
   },
   {

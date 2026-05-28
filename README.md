@@ -1,4 +1,4 @@
-# spl-swap
+# PingPay Referrals
 
 This is a Vite app containing:
 
@@ -14,7 +14,7 @@ This is a Vite app containing:
 #### Download the template
 
 ```shell
-pnpm create solana-dapp@latest -t gh:solana-foundation/templates/web3js/spl-swap
+pnpm create solana-dapp@latest -t gh:solana-foundation/templates/web3js/PingPay-referrals
 ```
 
 #### Install Dependencies

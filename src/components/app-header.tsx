@@ -24,7 +24,7 @@ export function AppHeader() {
           <Link to="/" className="text-xl hover:text-neutral-500 dark:hover:text-white">
             <div className="flex items-center gap-2">
               <img className="w-8 h-8 rounded-full" src="/apple-touch-icon.png" alt="T22" />
-              <span>MEASwap</span>
+              <span>PingPay Referrals</span>
             </div>
           </Link>
           <div className="hidden md:flex items-center">
